@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Music.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Track 1" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer" parent="Track 1"]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Track 1"]
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Track 1"]
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Track 1"]
+
+[node name="GridContainer" type="GridContainer" parent="Track 1"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Play" type="Button" parent="Track 1/GridContainer"]
+margin_right = 58.0
+margin_bottom = 20.0
+text = "Play"
+
+[node name="Stop" type="Button" parent="Track 1/GridContainer"]
+margin_top = 24.0
+margin_right = 58.0
+margin_bottom = 44.0
+text = "Stop"
+
+[node name="Layer1" type="Button" parent="Track 1/GridContainer"]
+margin_top = 48.0
+margin_right = 58.0
+margin_bottom = 68.0
+text = "Layer 1"
+
+[node name="Layer2" type="Button" parent="Track 1/GridContainer"]
+margin_top = 72.0
+margin_right = 58.0
+margin_bottom = 92.0
+text = "Layer 2"
+
+[node name="Layer3" type="Button" parent="Track 1/GridContainer"]
+margin_top = 96.0
+margin_right = 58.0
+margin_bottom = 116.0
+text = "Layer 3"
+
+[node name="Layer4" type="Button" parent="Track 1/GridContainer"]
+margin_top = 120.0
+margin_right = 58.0
+margin_bottom = 140.0
+text = "Layer 4"
+
+[connection signal="button_down" from="Track 1/GridContainer/Play" to="Track 1" method="_on_Play_button_down"]
+[connection signal="button_down" from="Track 1/GridContainer/Stop" to="Track 1" method="_on_Stop_button_down"]
+[connection signal="button_down" from="Track 1/GridContainer/Layer1" to="Track 1" method="_on_Layer1_button_down"]
+[connection signal="button_down" from="Track 1/GridContainer/Layer2" to="Track 1" method="_on_Layer2_button_down"]
+[connection signal="button_down" from="Track 1/GridContainer/Layer3" to="Track 1" method="_on_Layer3_button_down"]
+[connection signal="button_down" from="Track 1/GridContainer/Layer4" to="Track 1" method="_on_Layer4_button_down"]
